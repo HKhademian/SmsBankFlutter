@@ -25,7 +25,6 @@ class App extends StatelessWidget {
 				future: Repository.init(),
 				initialData: false,
 				builder: (context, snapshot) {
-					print('new ui for $snapshot');
 					if (snapshot.hasData && snapshot.data) {
 						return HomePage();
 					}
@@ -34,7 +33,7 @@ class App extends StatelessWidget {
 			),
 
 			onUnknownRoute: (setting) {
-				return MaterialPageRoute(builder: (context) => Text('Not Found'));
+				return MaterialPageRoute(builder: (context) => Text('صفحه ای یافت نشد'));
 			},
 		);
 	}
